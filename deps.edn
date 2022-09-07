@@ -21,4 +21,7 @@
   ;; Figwheel test runner
   :test  {:main-opts ["-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "practicalli.test-runner"]}
 
+  :kaocha-cljs
+  {:extra-paths ["test"]
+   :extra-deps  {com.lambdaisland/kaocha-cljs {:mvn/version "1.2.123"}}}
   }}

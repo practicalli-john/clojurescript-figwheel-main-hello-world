@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+# -- Add ws (node.js) support if not present
+[ -d "node_modules/ws" ] || npm install ws
+
+# -- Run Koacha-cljs 
+clojure -M:kaocha-cljs -m kaocha.runner "$@"
+
